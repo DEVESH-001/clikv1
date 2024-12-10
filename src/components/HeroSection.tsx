@@ -1,28 +1,62 @@
-import { div } from "framer-motion/client";
-import Link from "next/link";
 import React from "react";
 import ShinyButton from "./ui/shiny-button";
+import HeroVideoDialog from "./ui/hero-video-dialog";
+import LogoScroller from "./LogoScroller";
 
 const HeroSection = () => {
   return (
-    <div className="h-auto md:h-[40rem] w-full rounded-md flex flex-col items-center justify-center relative overflow-hidden mx-auto py-10 md:py-0">
-      <div className="p-4 relative z-10 w-full text-center">
-        <h1 className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-400 to-neutral-900">
+    <div className="min-h-screen w-full flex flex-col items-center justify-start px-4 py-16 md:py-24">
+      <div className="w-full max-w-6xl text-center pt-16 md:pt-20">
+        <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-400 to-neutral-900">
           Your CRE Analyst on Cloud
         </h1>
-        <p className="mt-8 text-base md:text-xl text-neutral-700 min-w-lg mx-auto">
+        <p className="mt-8 text-base md:text-xl text-neutral-700 max-w-3xl mx-auto">
           Extract actionable insights from financials, appraisals, offering
-          memorandums, <br /> and more Automate tedious tasks and focus on
-          growing your portfolio.
+          memorandums, and more. Automate tedious tasks and focus on growing
+          your portfolio.
         </p>
-        <div className="mt-8">
-          <ShinyButton href="/signin" className="mr-4 bg-blue-400 text-white">
+
+        {/* CTF Buttons */}
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center justify-center">
+          <ShinyButton
+            href="/signin"
+            className="min-w-[200px] px-8 py-3 text-lg font-semibold bg-blue-500 hover:bg-blue-600 text-white transition-all duration-300 hover:scale-105"
+          >
             Get Started For Free
           </ShinyButton>
-          <ShinyButton href="/pricing" className="mr-4">
-            See How It Work's
+          <ShinyButton
+            href="/pricing"
+            className="min-w-[200px] px-8 py-3 text-lg font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 transition-all duration-300 hover:scale-105"
+          >
+            See How It Works
           </ShinyButton>
-          {/* 2 buttton */}
+        </div>
+
+        {/* Hero Video */}
+        <div className="mt-20 max-w-5xl mx-auto">
+          <HeroVideoDialog
+            className="dark:hidden block"
+            animationStyle="from-center"
+            videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+            thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
+            thumbnailAlt="Hero Video"
+          />
+          <HeroVideoDialog
+            className="hidden dark:block"
+            animationStyle="from-center"
+            videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+            thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
+            thumbnailAlt="Hero Video"
+          />
+        </div>
+      </div>
+      {/* Companies animated logo */}
+      <div className="mt-32">
+        <h4 className="flex items-center justify-center text-base">
+          Trusted By Leading Companies
+        </h4>
+        <div className="mt-9">
+          <LogoScroller />
         </div>
       </div>
     </div>
