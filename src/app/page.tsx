@@ -1,5 +1,5 @@
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
-
 import Problem from "@/components/Problem";
 import WorkingSection from "@/components/WorkingSection";
 import React from "react";
@@ -13,6 +13,7 @@ const page = () => {
       <HeroSection />
       <Problem />
       <WorkingSection/>
+      <Footer/>
     </main>
   );
 };
