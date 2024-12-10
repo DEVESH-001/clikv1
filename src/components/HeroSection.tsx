@@ -20,7 +20,7 @@ const HeroSection = () => {
         <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center justify-center">
           <ShinyButton
             href="/signin"
-            className="min-w-[200px] px-8 py-3 text-lg font-semibold bg-blue-500 hover:bg-blue-600 text-white transition-all duration-300 hover:scale-105"
+            className="min-w-[200px] px-8 py-3 text-lg font-semibold bg-gray-300 hover:bg-gray-500  transition-all duration-300 hover:scale-105"
           >
             Get Started For Free
           </ShinyButton>

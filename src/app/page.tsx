@@ -1,4 +1,7 @@
 import HeroSection from "@/components/HeroSection";
+
+import Problem from "@/components/Problem";
+import WorkingSection from "@/components/WorkingSection";
 import React from "react";
 
 const page = () => {
@@ -8,6 +11,8 @@ const page = () => {
     // </div>
     <main className="antialiased">
       <HeroSection />
+      <Problem />
+      <WorkingSection/>
     </main>
   );
 };
