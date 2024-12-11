@@ -1,6 +1,8 @@
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import Pricing from "@/components/Pricing";
 import Problem from "@/components/Problem";
+// import FocusCardsDemo from "@/components/Testimonials";
 import WorkingSection from "@/components/WorkingSection";
 import React from "react";
 
@@ -13,6 +15,8 @@ const page = () => {
       <HeroSection />
       <Problem />
       <WorkingSection/>
+      {/* <FocusCardsDemo/> */}
+      <Pricing/>
       <Footer/>
     </main>
   );

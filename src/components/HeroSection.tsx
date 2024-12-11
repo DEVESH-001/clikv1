@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import ShinyButton from "./ui/shiny-button";
 import HeroVideoDialog from "./ui/hero-video-dialog";
@@ -19,13 +20,13 @@ const HeroSection = () => {
         {/* CTF Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center justify-center">
           <ShinyButton
-            href="/signin"
+            onClick={() => (window.location.href = "/signin")}
             className="min-w-[200px] px-8 py-3 text-lg font-semibold bg-gray-300 hover:bg-gray-500  transition-all duration-300 hover:scale-105"
           >
             Get Started For Free
           </ShinyButton>
           <ShinyButton
-            href="/pricing"
+            onClick={() => (window.location.href = "/pricing")}
             className="min-w-[200px] px-8 py-3 text-lg font-semibold bg-white hover:bg-neutral-50 border border-neutral-200 transition-all duration-300 hover:scale-105"
           >
             See How It Works
@@ -33,19 +34,19 @@ const HeroSection = () => {
         </div>
 
         {/* Hero Video */}
-        <div className="mt-20 max-w-5xl mx-auto">
+        <div className="mt-20 max-w-3xl mx-auto">
           <HeroVideoDialog
             className="dark:hidden block"
             animationStyle="from-center"
-            videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-            thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
+            videoSrc="https://www.youtube.com/embed/NMFZQq4F4yY" // Use embed URL
+            thumbnailSrc="/thumbnail.png"
             thumbnailAlt="Hero Video"
           />
           <HeroVideoDialog
             className="hidden dark:block"
             animationStyle="from-center"
-            videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-            thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
+            videoSrc="https://www.youtube.com/embed/NMFZQq4F4yY" // Use embed URL
+            thumbnailSrc="/thumbnail.png"
             thumbnailAlt="Hero Video"
           />
         </div>
