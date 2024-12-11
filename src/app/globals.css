@@ -6,6 +6,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --primary: 220, 90%, 56%; /* Define a blue primary color */
+  --primary-foreground: 0, 0%, 100%; /* White text color */
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -63,9 +67,7 @@ body {
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+
   body {
     @apply bg-background text-foreground;
   }
